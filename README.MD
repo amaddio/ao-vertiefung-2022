@@ -2,7 +2,7 @@
 
 ## Fragestellung
 
-Welchen Einfluss hat technische Affinität auf das Wohlbefinden und Zusammenarbeit in remote Teams. (Wohlbefinden vs effektive Zusammenarbeit)
+Welchen Einfluss hat technische Affinität auf das Wohlbefinden und effektive Zusammenarbeit in remote Teams. (Wohlbefinden vs effektive Zusammenarbeit)
 
 ## Methoden
 
