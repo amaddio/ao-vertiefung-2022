@@ -7,7 +7,7 @@ Welchen Einfluss hat technische Affinität auf das Wohlbefinden und effektive Zu
 ## Methoden
 
 - Erfassungmethode: Teilstrukturiertes Interview
-- Methodik zur Erklärung d. Phenomens: **Nomothetischer Ansatz**
+- Studie: qualitative Einzelfallstudie (_ideografischer Ansatz_, _intrinsic_ und _descriptive case study_)
 
 ### Kontrollvariablen:
 - Demographische Variablen
