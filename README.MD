@@ -2,7 +2,7 @@
 
 ## Fragestellung
 
-Welchen Einfluss hat technische Affinität auf das Wohlbefinden und effektive Zusammenarbeit in remote Teams? (Wohlbefinden vs effektive Zusammenarbeit).
+Development of Media Richness Perception Over Time and it's Effect on Well-Being and Communication Efficacy
 
 ## Methoden
 
@@ -25,7 +25,7 @@ Welchen Einfluss hat technische Affinität auf das Wohlbefinden und effektive Zu
 Wohlbefinden und Effektivität d. Zusammenarbeit
 
 ### Unabhängige Variable (Prädiktor)
-Technische Affinität in der Wahl des Kommunikationskanals (Medium).
+Perceived Media Richness (Enkodierung, Dekodierung)
 
 ### Konstrukte des Fragebogens
 - technische Affinität
