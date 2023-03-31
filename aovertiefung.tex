@@ -31,6 +31,8 @@
 
 \usepackage{lipsum}
 \usepackage{lscape}
+% https://tex.stackexchange.com/questions/2441/how-to-add-a-forced-line-break-inside-a-table-cell
+\usepackage{makecell}
 
 \usepackage[american]{babel}
 
@@ -133,81 +135,94 @@ The short observation of three months of Gather usage is a limitation of this ca
 
 \appendix
 
-\includegraphics{table-1-perceived-richness.jpg}
-\includegraphics{table-2-well-being.jpg}
-\includegraphics{table-3-comm-effect.jpg}
-
-
 \begin{landscape}
-
-\begin{table}[]
-\begin{tabular}{llllllllllllllll}
-\cline{1-5}
-\multicolumn{1}{|l|}{\textbf{Communication   ambiguity}} & \multicolumn{1}{l|}{\textbf{En-/Decoding experience}}      & \multicolumn{1}{l|}{\textbf{Improvable}} & \multicolumn{1}{l|}{\textbf{Improvement Strategy}}    & \multicolumn{1}{l|}{\textbf{Perceived media richness}} & \textbf{T1} & \textbf{T2} & \textbf{Functional Improvement} &  &  &  &  &  &  &  &  \\ \cline{1-5}
-\multicolumn{1}{|l|}{Activity status (A)}                & \multicolumn{1}{l|}{Activity status incorrect}             & \multicolumn{1}{l|}{Y}                   & \multicolumn{1}{l|}{Ignore status; Bypass with Slack} & \multicolumn{1}{l|}{}                                  & -           & -           & N                               &  &  &  &  &  &  &  &  \\ \cline{1-5}
-\multicolumn{1}{|l|}{}                                   & \multicolumn{1}{l|}{Obtrusiveness / verbal interruption}   & \multicolumn{1}{l|}{Y}                   & \multicolumn{1}{l|}{Communicate disliked behavior}    & \multicolumn{1}{l|}{}                                  & -           & -           & N                               &  &  &  &  &  &  &  &  \\ \cline{1-5}
-\multicolumn{1}{|l|}{Speaking order (E)}                 & \multicolumn{1}{l|}{Voice overlap (internet connectivity)} & \multicolumn{1}{l|}{N}                   & \multicolumn{1}{l|}{}                                 & \multicolumn{1}{l|}{}                                  & -           & -           & N                               &  &  &  &  &  &  &  &  \\ \cline{1-5}
-                                                         & Voice overlap (other reasons)                              & Y                                        &                                                       &                                                        & -           &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          & Pause between turn takings                            &                                                        &             & -           & N                               &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          & Focusation                                            &                                                        &             & -           & N                               &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          & Visual conversation guide                             &                                                        &             & -           & N                               &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-Emotions (D)                                             & Difficulty in emotion expression/interpretation            & Y                                        &                                                       &                                                        & -           &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          & React with Emoticon; Verbalize                        &                                                        &             & ++ (+)      & Y                               &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-                                                         &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-T1: effect of experience                                 &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  &  \\
-T2: effect of strategy                                   &                                                            &                                          &                                                       &                                                        &             &             &                                 &  &  &  &  &  &  &  & 
+\begin{table}
+\caption{Perceived Media Richness}
+\label{tab:BasicTable}
+\scriptsize
+\begin{tabular}{llllll} \toprule
+\textbf{Communication ambiguity} & \textbf{En-/Decoding experience}                & \multicolumn{3}{l}{\textbf{Improvement Strategy}} & \textbf{Funct. Impr.}\tabfnm{a} \\ \cmidrule(r){3-5}
+\multicolumn{4}{r}{\textbf{T1}} & \textbf{T2} &  \\ \midrule
+Activity status (A)                & Activity status incorrect                       & Ignore status; Bypass with Slack   & -             & -           & N                               \\
+                                   & Obtrusiveness / verbal interruption             & Communicate disliked behavior      & -             & -           & N                               \\
+Speaking order (B)                 & Voice overlap (internet connectivity)           &                                    & -             & -           & N                               \\
+                                   & Voice overlap (other reasons)                   &                                    & -             &             &                                 \\
+                                   &                                                 & Pause between turn takings         &               & -           & N                               \\
+                                   &                                                 & Focusation                         &               & -           & N                               \\
+                                   &                                                 & Visual conversation guide          &               & -           & N                               \\
+Emotions (C)                       & Difficulty in emotion expression/interpretation &                                    & -             &             &                                 \\
+                                   &                                                 & \multicolumn{2}{l}{React with Emoticon; Verbalize} & ++ (+)      & Y \\ \bottomrule                       
 \end{tabular}
+  \begin{tablenotes}[para,flushleft]
+        {\tiny
+            \tabfnt{a}Functional Improvement: The improvement strategy changes a negative impact of a en-/decoding experience into a neutral or positive effect on the outcome.
+         }
+    \end{tablenotes}
 \end{table}
-\end{landscape}
 
-% \begin{landscape}
-% \begin{table}
-  % \caption{Impact on Richness Perception, Well-Being and Communication Effectiveness over time}
-  % \label{tab:BasicTable}
-  % \begin{tabular}{@{}rrrrrrrrrrrrrrrr@{}}         \toprule
-                      % &                     &                 &                     &                     &                 & \multicolumn{3}{c}{Lerning rate param}        \\ \cmidrule(r){8-10}
-% CA\tabfnm{a}          & EDE\tabfnm{b}                 & I\tabfnm{c} & Improvement Strategy             & Perceived media richness & T1 & T2     & Functional Improvement & Well-being & T1 & T2    & Functional Improvement & Communication effectiveness            & T1 & T2    & Functional Improvement \\ \midrule
-% Activity status (A)   & Activity status incorrect     & Y          & Ignore status; Bypass with Slack &                          & -  & -      & N                      & Anger      & -  & + (=) & Y                      & Non-availability                       & -  & + (=) & Y                      \\ 
-                      % & Obtrusiveness                 & Y          & Communicate disliked behavior    &                          & -  & -      & N                      & Nervosity  & -  & + (=) & Y                      & Unprepared expensive contextual change & -  & + (=) & Y                      \\ 
-% Speaking order (E)    & Voice overlap (inern. connect.) & N          &                                  &                          & -  & -      &                        & Joy        & -  & -     &                        &                                        & -  & -     &                        \\ 
-                      % & Voice overlap (other reasons)                              & Y                               &                                                       &                                               & -  &        &                        & Joy        & -  &       &                        &                                        & -  &       &                        \\
-                      % &                                                            &                                 & Pause between turn takings                            &                                               &    & -      & N                      & Joy        &    & -     & N                      &                                        &    & -     & N                      \\
-                      % &                                                            &                                 & Focusation                                            &                                               &    & -      & N                      & Joy        &    & -     & N                      &                                        &    & + (=) & Y                      \\
-                      % &                                                            &                                 & Visual conversation guide                             &                                               &    & -      & N                      & Joy        &    & -     & N                      &                                        &    & + (=) & Y                      \\
-                      % &                                                            &                                 &                                                       &                                               &    &        &                        & Distress   &    & -     & N                      & Extra effort                           &    & -     & N                      \\
-% Emotions (D)          & Difficulty in emotion expression/interpretation            & Y                               &                                                       &                                               & -  &        &                        & Distress   & -  &       &                        & Incapable of emotional appraisal       & -  &       &                        \\
-                      % &                                                            &                                 &                                                       &                                               &    &        &                        & Fatigue    & -  &       &                        &                                        & -  &       &                        \\
-                      % &                                                            &                                 &                                                       &                                               &    &        &                        & Joy        & -  &       &                        &                                        & -  &       &                        \\
-                      % &                                                            &                                 & React with Emoticon; Verbalize                        &                                               &    & ++ (+) & Y                      & Distress   &    & -     &                        & Extra effort                           &    & -     & N                      \\
-                      % &                                                            &                                 &                                                       &                                               &    &        &                        & Fatigue    &    & + (=) &                        & Capable of emotional appraisal         &    & + (=) & Y                      \\
-                      % &                                                            &                                 &                                                       &                                               &    &        &                        & Joy        &    & + (=) &                        & Improved emotional perspektive taking  &    & + (=) & Y                     
-% \end{tabular}
-  % \begin{tablenotes}[para,flushleft]
-        % {\small
-            % \textit{Note.} Some combinations are duplicate but listed for full comprehension.
-% 
-            % \tabfnt{a}Instructed finger to move.
-            % \tabfnt{b}The finger that has actually been moved.
-            % \tabfnt{c}The finger the subject observes in 3D goggles which moves.
-            % \tabfnt{d}Motor error.
-            % \tabfnt{e}Feedback error.
-            % \tabfnt{f}Activation in extrastriate body area.
-            % \tabfnt{g}Learning rate parameter according to \textit{resilient} rule.
-            % \tabfnt{h}Learning rate parameter according to \textit{hinderance} rule.
-            % \tabfnt{i}Learning rate parameter according to \textit{overwrite} rule. Learning rates divided by 10 fingers, to simulate individual learning each finger. A positive/negative value means beneficial/detrimental directed learning, zero means no learning.
-            % The letter \textit{A} represents any possible finger, \textit{B} represents any possible finger other than \textit{A}.
-         % }
-    % \end{tablenotes}
-% \end{table}
-% 
-% \end{landscape}
+\begin{table}
+\caption{Well-Being}
+\label{tab:BasicTable}
+\scriptsize
+\begin{tabular}{lllllll} \toprule
+\textbf{Communication   ambiguity} & \textbf{En-/Decoding experience}                & \textbf{Improvement Strategy}    & \multicolumn{3}{l}{\textbf{Facet}} & \textbf{Funct. Impr.}\tabfnm{a} \\ \cmidrule(r){4-6}
+\multicolumn{5}{r}{\textbf{T1}} & \multicolumn{2}{l}{\textbf{T2}} \\ \midrule
+Activity status (A)                & Activity status incorrect                       & Ignore status; Bypass with Slack & Anger               & -           & + (=)       & Y                               \\
+                                   &                                                 &                                  & Distress            & -           & + (=)       & Y                               \\
+                                   & Obtrusiveness / verbal interruption             & Communicate disliked behavior    & Nervosity           & -           & + (=)       & Y                               \\
+Speaking order (E)                 & Voice overlap (internet connectivity)           &                                  & Joy                 & -           & -           & N                               \\
+                                   & Voice overlap (other reasons)                   &                                  & Joy                 & -           &             &                                 \\
+                                   &                                                 & Pause between turn takings       & Joy                 &             & -           & N                               \\
+                                   &                                                 & Focusation                       & Joy                 &             & -           & N                               \\
+                                   &                                                 & Visual conversation guide        & Joy                 &             & -           & N                               \\
+                                   &                                                 &                                  & Distress            & -           &             &                                 \\
+                                   &                                                 &                                  & Distress            &             & -           & N                               \\
+Emotions (D)                       & Difficulty in emotion expression/interpretation &                                  & Distress            & -           &             &                                 \\
+                                   &                                                 &                                  & Fatigue             & -           &             &                                 \\
+                                   &                                                 &                                  & Joy                 & -           &             &                                 \\
+                                   &                                                 & React with Emoticon; Verbalize   & Distress            &             & -           & N                               \\
+                                   &                                                 &                                  & Fatigue             &             & + (=)       & Y                               \\
+                                   &                                                 &                                  & Joy                 &             & + (=)       & Y                              \\ \bottomrule
+\end{tabular}
+  \begin{tablenotes}[para,flushleft]
+        {\tiny
+            \tabfnt{a}Functional Improvement: The improvement strategy changes a negative impact of a en-/decoding experience into a neutral or positive effect on the outcome.
+         }
+    \end{tablenotes}
+\end{table}
+
+\begin{table}
+\caption{Communication Effectiveness}
+\label{tab:BasicTable}
+\scriptsize
+\begin{tabular}{lllllll} \toprule
+\textbf{Communication   ambiguity} & \textbf{En-/Decoding experience}                & \textbf{Improvement Strategy}    & \multicolumn{3}{l}{\textbf{Facet}} & \textbf{Funct. Impr.}\tabfnm{a} \\ \cmidrule(r){4-6}
+\multicolumn{5}{r}{\textbf{T1}} & \multicolumn{2}{l}{\textbf{T2}} \\ \midrule
+Activity status (A)                & Activity status incorrect                       & Ignore status; Bypass with Slack & Non-availability                       & -           & + (=)       & Y                               \\
+                                   & Obtrusiveness / verbal interruption             & Communicate disliked behavior    & Expensive contextual change & -           & + (=)       & Y                               \\
+Speaking order (E)                 & Voice overlap (internet connectivity)           &                                  &                                        & -           & -           &                                 \\
+                                   & Voice overlap (other reasons)                   &                                  &                                        & -           &             &                                 \\
+                                   &                                                 & Pause between turn takings       &                                        &             & -           & N                               \\
+                                   &                                                 & Focusation                       &                                        &             & + (=)       & Y                               \\
+                                   &                                                 & Visual conversation guide        &                                        &             & + (=)       & Y                               \\
+                                   &                                                 &                                  & Extra effort                           &             & -           & N                               \\
+                                   &                                                 &                                  &                                        &             &             &                                 \\
+Emotions (D)                       & Difficulty in emotion expression/interpretation &                                  & Incapable of emotional appraisal       & -           &             &                                 \\
+                                   &                                                 &                                  &                                        & -           &             &                                 \\
+                                   &                                                 &                                  &                                        & -           &             &                                 \\
+                                   &                                                 & React with Emoticon; Verbalize   & Extra effort                           &             & -           & N                               \\
+                                   &                                                 &                                  & Capable of emotional appraisal         &             & + (=)       & Y                               \\
+                                   &                                                 &                                  & Emotional perspective taking  &             & + (=)       & Y                               \\
+                                   &                                                 &                                  & Joy                                    &             & + (=)       & Y                                 \\ \bottomrule
+\end{tabular}
+  \begin{tablenotes}[para,flushleft]
+        {\tiny
+            \tabfnt{a}Functional Improvement: The improvement strategy changes a negative impact of a en-/decoding experience into a neutral or positive effect on the outcome.
+         }
+    \end{tablenotes}
+\end{table}
+
+\end{landscape}
 \end{document}
 
 %% 
